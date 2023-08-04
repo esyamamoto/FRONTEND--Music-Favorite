@@ -11,6 +11,7 @@ const searchAlbumsAPI = async (artist: string): Promise<AlbumType[]> => {
 
   const response = results.map((artistInfo) => ({ ...artistInfo }));
   return response;
+  console.log(response);
 };
 
 export default searchAlbumsAPI;
