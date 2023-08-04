@@ -17,11 +17,11 @@ export function Album() {
     // Função assíncrona para buscar os dados do álbum com base no 'id' fornecido
     async function albumData() {
       const result = await getMusics(id); // Faz a requisição à API para obter os dados do álbum
-      setInfoMusic(result[0]);
+      setInfoMusic(result[0]); // Se o nome da banda ou artista e o nome do álbum são exibidos; Define o estado "infoMusic" com os detalhes do álbum (usando o primeiro item do resultado).
 
       const onlyMusics = result.filter((item) => 'trackId' in item) as SongType[]; // Filtra os resultados para obter apenas as músicas do álbum
-      setMusic(onlyMusics);
-      setLoading(false);
+      setMusic(onlyMusics); // Se o serviço de musicsAPI está sendo chamado; Define o estado "musics" com as músicas do álbum.
+      setLoading(false); // Se é exibido o texto Carregando... enquanto a requisição está sendo feita; Define o estado "loading" como false após obter os dados da API.
     }
     albumData();
   }, [id]);
@@ -46,6 +46,7 @@ export function Album() {
                 </section>
               </div>
             )}
+            { /* Se todas músicas retornadas pela API são listadas. */ }
             { musics.map((music, index) => (
               <CustomInfoMusic
                 key={ index }
