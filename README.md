@@ -1,9 +1,9 @@
 # Project Music Favorite
 
-
 <details>
 <summary><strong>👨‍💻 O que foi desenvolvido</strong></summary><br />
 Nesse projeto foi criado uma aplicação para pesquisar e listar álbuns e músicas de várias bandas e artistas. É possível até mesmo ouvir o preview de cada música. Além disso, também pode favoritar suas músicas preferidas. Tudo isso dividido em várias rotas, cada uma responsável por uma parte da funcionalidade.
+ - Disponivel neste link:  https://frontend-music-favorite.vercel.app/
  </details>
 
 <details>
